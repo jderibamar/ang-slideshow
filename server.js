@@ -8,12 +8,12 @@ const port = process.env.PORT || 3000
 // const client = require('client.io-client')
 
 // Routing
-// app.use(express.static(path.join(__dirname + '/dist/ang-slide-show')) )
-app.use(express.static(`${__dirname}/dist/${nomeApp}`))
+app.use(express.static(path.join(__dirname + '/dist/ang-slide-show')) )
+// app.use(express.static(`${__dirname}/dist/${nomeApp}`))
 app.get('/*', (req, res) =>
 {
-    res.sendFile(path.join(`${__dirname}/dist/${nomeApp}/index.html`))
-    // res.sendFile(__dirname + '/dist/ang-slide-show/index.html')   
+    // res.sendFile(path.join(`${__dirname}/dist/${nomeApp}/index.html`))
+    res.sendFile(__dirname + '/dist/ang-slide-show/index.html')   
 })
 
 app.listen(port, () => { console.log('Servidor ativo na porta %d', port) })
