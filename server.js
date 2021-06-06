@@ -4,7 +4,7 @@ const path = require('path')
 const nomeApp = process.env.npm_package_name
 // const cors = require('cors')
 const port = process.env.PORT || 3000
-app.use(cors())
+// app.use(cors())
 // const client = require('client.io-client')
 
 // Routing
